@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Lobster&family=Codystar&family=Permanent+Marker&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.9);
+}
+html{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../static/threequarters.gif);
+    background-size: cover;
+}
+header{
+    /* background border */
+    background-color: rgba(127, 255, 212, 0.6);
+    border-radius: 8vh;
+    /* margin padding */
+    margin-bottom: 0.5vh;
+    padding: 1vh;
+    /* font */
+    font-family: codystar;
+    font-weight: bolder;
+    font-size: 9vh;
+}
+nav{
+    /* backg round and border */
+    background-color: rgba(0, 255, 255, 0.6);
+    border-radius: 8vh;
+    /* margin padding */
+    margin: 0 1vh 1vh 1v;
+    padding: 1vh;
+    /* font */
+    font-family: Permanent Marker;
+    /* flex */
+    display: flex;
+    justify-content: space-evenly;
+}
+    nav > a, nav a:active {
+        font-size: 2vh;;
+        color: rgba(0, 0, 0, 0.9);
+        text-decoration: none;
+    }
