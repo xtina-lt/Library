@@ -1,19 +1,18 @@
 import React, {useState} from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
 
-const LoginForm = (props) => {
+const LoginForm = props => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [errors, setErrors] = useState('')
-    const navigate = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:8000/api/login',{ email, password})
-            .then ( res => {console.log(res);
-                navigate(`/dash/${res.data.user._id}`)
-            } )
+        axios.post('http://localhost:8000/api/login',{ email, password}, { withCredentials: true })
+            .then ( res => {
+                console.log('user', res.data.user);
+                window.location.href = "/dash"
+            })
             .catch( err => {console.log(err.response.data); setErrors(err.response.data.errors)} )
     }
 

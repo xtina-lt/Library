@@ -1,28 +1,31 @@
+require('dotenv').config()
 // express: js framework - interface to Node Server
 const express = require('express');
 const app = express();
+const cors = require('cors')
+const cookieParser = require('cookie-parser')
+const PORT = process.env.PORT;
+
+
 app.use( express.json() )
 app.use( express.urlencoded({extended:true}) )
+app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
+app.use(cookieParser())
 
 // cors cross-origin requests
-const cors = require('cors')
 // app.use( cors() )
 // session cors
-app.use(cors({origin: 'http://http://localhost:3000', credentials:true}))
-
 // connect to mongooese and routes
 require('./config/mongoose')
 require('./routes/users.routes')(app)
 require('./routes/likes.routes')(app)
+require('./routes/gifshop.routes')(app)
+require('./routes/projects.routes')(app)
 
 // middleware for cookies
-const cookieParser = require('cookie-parser')
-app.use(cookieParser())
 
 // read enviroment variables
-require('dotenv').config()
 // app listen to port
-const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`Party on port: ${PORT}`) );
 
 

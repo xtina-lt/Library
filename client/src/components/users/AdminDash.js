@@ -1,19 +1,16 @@
 import React from "react";
-import Header from "../site/Header";
-import Nav from "../site/Nav";
-import FindLikes from "../likes/FindLikes";
+import Likes from "../likes/LikesAdmin";
 
 
 const AdminDash = props => {
-    const logged = '62ec28b04969c11611761c06'
-
     return (
         <>
-        <Header header="XTINA.CODES"/>
-        <Nav/>
-        <main>
-            <FindLikes logged={logged}/>
-        </main>
+        <a href='/projects-admin'>
+            <h2>
+                Projects
+            </h2>
+        </a>
+        <Likes/>
         </>
     )
 }

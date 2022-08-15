@@ -1,11 +1,10 @@
-const Model = require('../models/likes.model')
+const Model = require('../models/gifshop.model')
 
 
 const create = (req,res) => {
-    console.log('likes.create', req.body)
     Model.create(req.body)
-        .then( e => {console.log('created like'); res.json(e)} )
-        .catch( e => {console.log('not created like'); res.json(e)} )
+        .then( e => {console.log('isnerted'); res.json(e)} )
+        .catch( e => {console.log('not inserted'); res.json(e)} )
 }
 const find = (req, res) => {
     Model.find()
@@ -13,14 +12,13 @@ const find = (req, res) => {
         .catch( e => res.json( e ) )
 }
 
-const userLikes = (req, res) => {
+const findUser = (req, res) => {
     Model.find( {users: req.params.id} )
-        .then( e => res.json(e) )
-        .catch( e => res.status(400).json({ errors: 'oops something when wrong in find' })  )
+        .then( e => res.json( e ) )
+        .catch( e => res.status(400).json({ errors: 'oops something when wrong in find' }) )
 }
 
 const findOne = (req, res) => {
-    // or change to body
     Model.findOne( {_id: req.params.id} )
         .then( e => res.json(e) )
         .catch( e => res.status(400).json({ errors: 'oops something when wrong in findone' })  )
@@ -38,4 +36,4 @@ const deleteOne = (req, res) => {
         .catch( e => res.json(e) )
 }
 
-module.exports = {create, find, findOne, update, deleteOne, userLikes};
+module.exports = {create, find, findOne, update, deleteOne, findUser};

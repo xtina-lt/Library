@@ -1,13 +1,9 @@
 import React from 'react'
-import Header from './Header';
-import Nav from './Nav';
+import LikeIcon from '../likes/LikeIcon';
 
-const Home = props => {
+const Home = ({setHeader}) => {
     return (
         <>
-        <Header header="XTINA.CODES"/>
-        <Nav/>
-        <main>
             {/* LEFT SIDE */}
             <div id='about-me'>
                     <ul>
@@ -43,6 +39,7 @@ const Home = props => {
                             </span>
                         </li>
                     </ul>
+                    <LikeIcon id={'62edaf62448bd0af02e3ffe7'}/>
                 </div>
 
             {/* RIGHT SIDE */}
@@ -85,6 +82,7 @@ const Home = props => {
                             </tr>
                         </tbody>
                     </table>
+                    <LikeIcon id={'62edaee7448bd0af02e3ffe3'}/>
                 </div>
 
                 {/* CODING VOCABULARY */}
@@ -98,6 +96,7 @@ const Home = props => {
                     Being able to create a prototype and read code in different languages allows for versitility in any project. 
                     Learning the basics in many languages enhances a larger picture to be taken from complex problems. 
                     This is beneficial for unique solutions with a greater over all control of the product.
+                    <LikeIcon id={'62ed90dde6ed3cda6aa98850'}/>
                 </div>
                 <div>
                     <h3>
@@ -108,6 +107,7 @@ const Home = props => {
                     Client devices talk to servers that store web pages or applications. 
                     Then, the application's servers interpret what information is neccessary, sometimes this is done with routing. 
                     Finally, the response is the application's server <span className='accent'>sends the data back</span> to the client.
+                    <LikeIcon id={'62ed90fde6ed3cda6aa98856'}/>
                 </div>
                 <div>
                     <h3>
@@ -118,6 +118,7 @@ const Home = props => {
                     Ensuring dynamic readability between cross-browsers, cross-platforms (operating systems), and cross-devices is pertinent to front-end development.
                     <br/>
                     Examples: <span className='accent'>Hypertext Markup Language(HTML)</span>, <span className='accent'>Cascading Style Sheets(CSS)</span>, and <span className='accent'>JavaScript(JS)</span> frameworks.
+                    <LikeIcon id={'62ed9106e6ed3cda6aa9885c'}/>
                 </div>
                 <div>
                     <h3>
@@ -131,6 +132,7 @@ const Home = props => {
                     Back-end development acts as a middle man for communication between the client and database.
                     <br/>
                     Examples: <span className='accent'>Python, Java, Ruby, and C#.</span>
+                    <LikeIcon id={'62ed9115e6ed3cda6aa98862'}/>
                 </div>
                 <div>
                     <h3>
@@ -144,6 +146,7 @@ const Home = props => {
                     Differentiating <span className='accent'>Many-to-Many, Many-to-One, and One-to-Many relationships</span>, and seperating for normalization is fundamental. 
                     The basics are being able to destinguish the differnt datatypes, naming conventions, and <span className='accent'>CRUD(Create, Read, Update, Delete)</span> quieries.
                     Examples: <span className='accent'>MySQL and MangoDB.</span>
+                    <LikeIcon id={'62ed9121e6ed3cda6aa98868'}/>
                 </div>
                 <div>
                     <h3>
@@ -156,6 +159,7 @@ const Home = props => {
                     Variables and <span className='accent'>attributes</span> are created for things hat real world objects have. 
                     <span className='accent'>Methods</span> are created to represent real world objects' behaviors. 
                     Complex planning and implimentation is neccessary to execute this type of programming.
+                    <LikeIcon id={'62ed9135e6ed3cda6aa9886e'}/>
                 </div>
                 <div>
                     <h3>
@@ -166,6 +170,7 @@ const Home = props => {
                     This is how we write out our code. 
                     This is sequential.
                     Promises and Async/Await can be used to offset the timeline or location in code.
+                    <LikeIcon id={'62ed9145e6ed3cda6aa98874'}/>
                 </div>
                 <div>
                     <h3>
@@ -175,9 +180,9 @@ const Home = props => {
                     They make use of <span className='accent'>state which is updated in real time(is also a hook)</span>.
                     Using hooks instead of classes is great for refactoring. 
                     <span className='accent'>Hooks are functions that let you “hook into” React state and lifecycle features from function components. Hooks don’t work inside classes — they let you use React without classes. -Reactjs.org</span>
+                    <LikeIcon id={'62ed9151e6ed3cda6aa9887a'}/>
                 </div>
             </div>
-        </main>
         </>
     )
 }

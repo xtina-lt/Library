@@ -28,17 +28,6 @@
         }
     }
 
-/* LINKS */
-a {
-    font-size: 2vh;
-    color: rgba(0, 0, 0, 0.9);
-    text-decoration: none;
-}
-    a:hover{
-        transform: translateY(-0.25vh);
-        color: rgba(127, 255, 212, 0.7);
-    }
-
 /*  SITE PAGE */
 html{
     /* size */
@@ -80,19 +69,16 @@ nav{
     /* flex */
     display: flex;
     justify-content: space-evenly;
+    /* font */
+    font-size: 2.5vh;
     /* animation */
     animation: fadeInAnimation ease 5s, glow 2s ease-in-out infinite alternate;
 }
-    nav > a{
-        font-size: 2.5vh;
-    }
-    nav > a:hover {
-        color: rgba(0, 0, 0, 0.9);
-    }
 
     main {
         /* display */
-        display: inline-flex;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
         /* size */
@@ -109,6 +95,7 @@ nav{
         max-width: min-content;
         max-height: 78vh;
         padding: 1vh;
+        margin: 1vh;
         /* scroll */
         overflow-y: scroll;
         scrollbar-width: none;
@@ -117,6 +104,11 @@ nav{
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
     }
+        .container{
+            background-color: pink;
+            max-height: 78vh;
+            overflow-y: scroll;
+        }
         main > div > div {
             max-height: 81vh;
             background-color: rgba(138, 43, 226, 0.8);
@@ -131,11 +123,6 @@ nav{
             font-weight: lighter;
         }
 
-        main > div > div > div{
-            background-color: red;
-            margin: 1vh 0 1vh 0;
-        }
-
         #about-me{
             background-color: rgba(220, 20, 120, 0.6);
             max-width: 25vh;
@@ -144,11 +131,6 @@ nav{
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
         }
-
-/* SPECIFIC */
-.no-background{
-    background-color: rgba(255, 255, 255, 0);
-}
 
 
 /* TEXT */
@@ -161,6 +143,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 6vh;
 }
 
+/* specialty classes */
 .accent{
     color:rgba(0, 0, 0, 0.8);
     text-shadow: 0 0 0.2vh rgba(255, 255, 255, 0.9);
@@ -169,13 +152,25 @@ h1, h2, h3, h4, h5, h6 {
 .emoji{
     font-size: 10vh;
 }
+.block{
+    display: block;
+    margin: 0 auto;
+}
+.no-background{
+    background-color: rgba(255, 255, 255, 0);
+}
 
 /* images */
 img {
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+    height: 30vh;
+    object-fit: cover;
+    margin: 2vh 1vh;
 }
 #me{
     border-radius: 80%;
+    width: auto;
+    height: auto;
 }
 
 /* TABLES */
@@ -206,7 +201,7 @@ table{
 /* FORMS */
 input, select, textarea, select:focus{
     /* background and border */
-    background-color: rgba(240, 248, 255, 0.6);
+    background-color: rgba(240, 248, 255, 0.4);
     border-radius: 2vh;
     border: none;
     outline: none;
@@ -224,7 +219,7 @@ input, select, textarea, select:focus{
     input[type=submit]{
         font-family: Lobster;
         color: rgba(0, 0, 0, 0.9);
-        width: 100%;
+        width: inherit;
         margin-top: 2vh;
         /* animation */
         animation: glow 3s ease-in-out infinite alternate;
@@ -232,24 +227,43 @@ input, select, textarea, select:focus{
 
 /* buttons */
 button{
-    /* background */
-    background-color: rgba(72, 15, 102, 0.7);
+    background-color: rgba(255,255,255, 0.0);
+    padding: 0;
+    margin: 0;
     border: none;
-    border-radius: 1vh;
-    /* padding margin */
-    padding: 0 2vh;
-    /* font */
-    font-family: "Permanent Marker";
-    color: rgba(0, 0, 0, 0.6);
-    font-size: 1.5vh;
-    /* button specific */
-    transition-duration: 0.7s;
-    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
 }
+    .fancy-btn{
+        display: block;
+        /* background */
+        background-color: rgba(240, 248, 255, 0.4);
+        border: none;
+        border-radius: 2vh;
+        /* padding margin */
+        padding: 1vh 2vh;
+        margin: 1vh auto;
+        /* font */
+        color: rgba(0, 0, 0, 0.9);
+        font-size: inherit;
+        font-family: Lobster;
+        /* button specific */
+        transition-duration: 0.7s;
+        cursor: pointer;
+        animation: glow 1s ease-in-out infinite alternate;
+    }
 
-    button:hover {
-        background-color:rgba(123, 216, 219, 0.9);
-        color: rgba(253, 252, 252, 0.7);
+    /* LINKS */
+a {
+    font-size: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+    a:hover, button:hover{
+        transform: translateY(-0.25vh);
+        color: inherit;
+        cursor: pointer;
     }
 
 /* LISTS */
@@ -273,6 +287,9 @@ ul {
     header{
         font-size: 10vw;
     }
+    nav > a{
+        font-size: 2vh;
+    }
     main{
         background-color: rgba(255, 255, 0, 0.1);
         height: 80vh;
@@ -294,14 +311,14 @@ ul {
         overflow: scroll;
         scrollbar-width: none;
     }
-    input, form{
+    input, form {
         width: 100%;
     }
     input[type=text], input[type=password]{
         width: 85%;
     }
     table, tr, td, th {
-        font-size: 1em;
+        font-size: 2vw;
         padding: 0;
     }
     input {
@@ -335,7 +352,6 @@ ul {
         }
 
         main > div > div {
-            background-color: red;
             width: 94vw;
             margin: 1vh auto;
         }
@@ -349,4 +365,8 @@ ul {
             input[type=submit]{
                 width: min-content;
             }
+        
+        table, td, th, tr{
+            font-size: 2vh;
+        }
 }

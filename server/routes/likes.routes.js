@@ -7,4 +7,5 @@ module.exports = app => {
     app.get('/api/like/:id',CONTROLLER.findOne)
     app.put('/api/like/:id', CONTROLLER.update)
     app.delete('/api/like/:id', CONTROLLER.deleteOne)
+    app.get('/api/like/user/:id', CONTROLLER.userLikes)
 }

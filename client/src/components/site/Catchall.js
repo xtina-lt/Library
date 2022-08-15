@@ -1,13 +1,9 @@
 import React from 'react'
-import Header from './Header';
-import Nav from './Nav';
 
-const Catchall = props => {
+const Catchall = ({setHeader}) => {
+    setHeader('Ooops')
     return (
         <>
-        <Header header="XTINA.CODES"/>
-        <Nav/>
-        <main>
             <div>
                 <span className="accent">
                     Page not found.....
@@ -34,7 +30,6 @@ const Catchall = props => {
                     🧁
                 </span>
             </div>
-        </main>
         </>
     )
 }

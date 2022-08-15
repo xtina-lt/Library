@@ -1,12 +1,9 @@
 import React, {useState} from "react"
 import axios from "axios"
-import { useNavigate } from "react-router-dom"
 
-const LikeForm = props => {
-    const { old, logged } = props
+const Form = ({ likes, setLikes, old, logged, submit }) => {
     const [like, setLike] = useState( old || {desc: '', url: ''} )
     const[success, setSuccess] = useState(false);
-    const navigate = useNavigate()
 
     const handleUpdate = e => {
         e.preventDefault()
@@ -18,12 +15,14 @@ const LikeForm = props => {
     const handleCreate = e => {
         e.preventDefault()
         axios.post('http://localhost:8000/api/likes/create', {desc: like.desc, url: like.url, users: []})
-            .then( e => navigate(`/dash/${logged}`) )
+            .then( e => { setLikes([...likes, e.data]);
+                            setLike({desc: '', url: ''});
+            } )
             .catch( e => console.log('wrong'))
     }
 
     return(
-        <form onSubmit={(old) ? handleUpdate : handleCreate}>
+        <form onSubmit={(old) ? handleUpdate : handleCreate} >        
             {success && <span className='accent'>Success!<br/></span>}
         <label>
             Description:
@@ -33,9 +32,9 @@ const LikeForm = props => {
             url:
             <input type="text" value={like.url} onChange={ e => setLike({...like, url: e.target.value}) } />
         </label>
-        <input type="submit" value='submit'/>
+        <input type="submit" value={submit || 'Create'}/>
         </form>
     )
 }
 
-export default LikeForm
+export default Form

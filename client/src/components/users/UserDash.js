@@ -1,19 +1,12 @@
-import React from "react";
-import Header from "../site/Header";
-import Nav from "../site/Nav";
+import React, {useState, useEffect}from "react";
+import LikesUser from "../likes/LikesUser";
+import GifshopUser from "../gifshop/GifshopUser";
 
-const UserDash = props => {
-    const {id} = props
+const UserDash = ({id}) => {
     return(
         <>
-            <Header/>
-            <Nav/>
-            <main>
-                <div>
-                    {/* things liked */}
-                    SHOW LIKES {id}
-                </div>
-            </main>
+            <LikesUser id={id}/>
+            <GifshopUser id={id}/>
         </>
     )
 }

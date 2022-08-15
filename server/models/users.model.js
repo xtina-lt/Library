@@ -24,6 +24,7 @@ const Schema = new mongoose.Schema({
     },
     stars : {
         type: Number,
+        required: [true]
     }
 }, {timestamps: true} )
 
