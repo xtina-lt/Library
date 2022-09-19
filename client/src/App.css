@@ -108,7 +108,7 @@ nav{
         scrollbar-width: none;
     }
         .container{
-            /* background-color: pink; */
+            background-color: rgba(112, 56, 168, 0);
             /* sizing */
             max-height: 80vh;
             width: max-content;
