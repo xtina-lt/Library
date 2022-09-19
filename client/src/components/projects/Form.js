@@ -1,11 +1,10 @@
 import React, {useState} from "react"
 import axios from "axios"
-import ProjectsAdmin from "./ProjectsAdmin"
 
 const Form = ({ list, setList, projects, setProjects, old, submit }) => {
     const [likeId, setLikeId] = useState('')
     const [item, setItem] = useState( 
-        (old.hasOwnProperty('node_id')) 
+        (old && old.hasOwnProperty('node_id')) 
         ? 
         {gitId: old.id, name: old.name.replace("-", " ").replace("_", " "), language: old.language, desc: old.description, categories: old.topics, gitUrl: old.git_url, url: old.homepage} 
         :

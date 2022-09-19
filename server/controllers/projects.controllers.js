@@ -7,7 +7,7 @@ const create = (req,res) => {
         .catch( e => {console.log('not created'); res.status(400).json({ errors: 'projets controller create error' }) })
 }
 const find = (req, res) => {
-    Model.find()
+    Model.find().sort( { "language": -1 } )
         .then( e => res.json( e ) )
         .catch( e => res.status(400).json({ errors: 'oops something when wrong in find' }) )
 }

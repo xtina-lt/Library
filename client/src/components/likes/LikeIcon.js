@@ -9,7 +9,7 @@ const LikeIcon = ({id}) => {
     // get like by id
     useEffect( ()=>{
         axios.get(`http://localhost:8000/api/like/${id}`)
-            .then( res => {console.log('likeroo');setLike(res.data); setLikeUsers(res.data.users)} )
+            .then( res => {setLike(res.data); setLikeUsers(res.data.users)} )
             .catch( res => console.log('something wrong in like button') )
     },[] )
 

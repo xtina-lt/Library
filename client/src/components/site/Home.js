@@ -43,47 +43,47 @@ const Home = ({setHeader}) => {
                 </div>
 
             {/* RIGHT SIDE */}
-            <div className='no-background'>
-                <div>
+            <div className='container inline'>
                     <h2>
                         Concepts Languages Libraries
                     </h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Front-End</th>
-                                <th>Python</th>
-                                <th>JavaScript</th>
-                                <th>Java</th>
-                                <th>Concepts</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>HTML5</td>
-                                <td>Flask</td>
-                                <td>React</td>
-                                <td>Spring</td>
-                                <td>AJAX</td>
-                            </tr>
-                            <tr>
-                                <td>CSS3</td>
-                                <td>Django</td>
-                                <td>Express</td>
-                                <td>Bcrypt</td>
-                                <td>OOP</td>
-                            </tr>
-                            <tr>
-                                <td>API's</td>
-                                <td>MySQL</td>
-                                <td>MongoDB</td>
-                                <td>MySQL</td>
-                                <td>REST</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <LikeIcon id={'62edaee7448bd0af02e3ffe3'}/>
-                </div>
+                    <div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Front-End</th>
+                                    <th>Python</th>
+                                    <th>JavaScript</th>
+                                    <th>Java</th>
+                                    <th>Concepts</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>HTML5</td>
+                                    <td>Flask</td>
+                                    <td>React</td>
+                                    <td>Spring</td>
+                                    <td>AJAX</td>
+                                </tr>
+                                <tr>
+                                    <td>CSS3</td>
+                                    <td>Django</td>
+                                    <td>Express</td>
+                                    <td>Bcrypt</td>
+                                    <td>OOP</td>
+                                </tr>
+                                <tr>
+                                    <td>API's</td>
+                                    <td>MySQL</td>
+                                    <td>MongoDB</td>
+                                    <td>MySQL</td>
+                                    <td>REST</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <LikeIcon id={'62edaee7448bd0af02e3ffe3'}/>
+                    </div>
 
                 {/* CODING VOCABULARY */}
                 <h2>Let's Talk Coding</h2>

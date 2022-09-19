@@ -19,11 +19,14 @@ const Nav = props => {
             <a href="/">
                 Home
             </a>
-            <a href="https://github.com/xtina-lt" target="_blank" rel="noopener">
+            <a href="https://github.com/xtina-lt" target="_blank" rel="noreferrer">
                 GitHub
             </a>
             <a href='/gifshop'>
                 GifShop
+            </a>
+            <a href='/projects'>
+                Projects
             </a>
             {
                 (logged) ? 

@@ -73,8 +73,8 @@ const GifShop = props => {
             - can edit with forms */}
             {
                 (Cookies.get('userId') && Cookies.get('userId') === '62f693acc7864d95c7e69e82') ?
-                <>
-                { list.map( (obj, i) =>
+                <div className='container'>
+                    { list.map( (obj, i) =>
                     <div key={i}>
                         <img src={obj.url} alt={obj.name}/>
                         <Form list={list} setList={setList} old={obj} submit={'Update'}/>
@@ -83,7 +83,7 @@ const GifShop = props => {
                         </button>
                     </div>
                 )}
-                </>
+                </div>
                 :
                 <>
         {/* NORMAL STATUS SECTION *****************
@@ -123,67 +123,21 @@ const GifShop = props => {
         {/* NORMAL USER READ *****************
             - shows all documents in collection
             - option to buy */}
+            <div className='container'>
                 { list.map( (obj, i) =>
-                    <div key={i}>
-                        <h2>
-                            {obj.name}
-                        </h2>
-                        <img src={obj.url} alt={obj.name}/>
-                        {obj.desc}
-                        <button className='fancy-btn' onClick={e=>handleBuy(e,obj)}>
-                            Buy 💜{obj.price}
-                        </button>
-                    </div>
+                        <div key={i}>
+                            <h2>
+                                {obj.name}
+                            </h2>
+                            <img src={obj.url} alt={obj.name}/>
+                            {obj.desc}
+                            <button className='fancy-btn' onClick={e=>handleBuy(e,obj)}>
+                                Buy 💜{obj.price}
+                            </button>
+                        </div>
                 )}
-                                { list.map( (obj, i) =>
-                    <div key={i}>
-                        <h2>
-                            {obj.name}
-                        </h2>
-                        <img src={obj.url} alt={obj.name}/>
-                        {obj.desc}
-                        <button className='fancy-btn' onClick={e=>handleBuy(e,obj)}>
-                            Buy 💜{obj.price}
-                        </button>
-                    </div>
-                )}
-                                { list.map( (obj, i) =>
-                    <div key={i}>
-                        <h2>
-                            {obj.name}
-                        </h2>
-                        <img src={obj.url} alt={obj.name}/>
-                        {obj.desc}
-                        <button className='fancy-btn' onClick={e=>handleBuy(e,obj)}>
-                            Buy 💜{obj.price}
-                        </button>
-                    </div>
-                )}
-                                { list.map( (obj, i) =>
-                    <div key={i}>
-                        <h2>
-                            {obj.name}
-                        </h2>
-                        <img src={obj.url} alt={obj.name}/>
-                        {obj.desc}
-                        <button className='fancy-btn' onClick={e=>handleBuy(e,obj)}>
-                            Buy 💜{obj.price}
-                        </button>
-                    </div>
-                )}
-                                { list.map( (obj, i) =>
-                    <div key={i}>
-                        <h2>
-                            {obj.name}
-                        </h2>
-                        <img src={obj.url} alt={obj.name}/>
-                        {obj.desc}
-                        <button className='fancy-btn' onClick={e=>handleBuy(e,obj)}>
-                            Buy 💜{obj.price}
-                        </button>
-                    </div>
-                )}
-                </>
+            </div>
+            </>
             }
         </>
 
