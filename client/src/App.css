@@ -98,8 +98,8 @@ nav{
         width: min-content;
     }
     main > div, main > div > div {
-        /* background-color: rgba(112, 56, 168, 0.7); */
-        background-color: red;
+        background-color: rgba(112, 56, 168, 0.7);
+        /* background-color: red; */
         margin: 1vh;
         border-radius: 5vh;
         padding: 1vh;
@@ -108,7 +108,7 @@ nav{
         scrollbar-width: none;
     }
         .container{
-            background-color: pink;
+            /* background-color: pink; */
             /* sizing */
             max-height: 80vh;
             width: max-content;
