@@ -7,7 +7,7 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 // // get secret ket from .env
 // require('dotenv').config()
-const SECRET = SECRETpassw0rd
+const SECRET = "SECRETpassw0rd"
 
 // test
 const index = (req, res) => {
