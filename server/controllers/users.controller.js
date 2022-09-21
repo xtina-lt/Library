@@ -50,9 +50,12 @@ const login = async (req, res) => {
             } else {
                 const payload = { _id: user._id, email: user.email, first: user.first }
                 const token = jwt.sign(payload, SECRET)
-                res.cookie('userToken', token, { httpOnly: true }, { sameSite: 'none', secure: true })
-                res.cookie('stars', user.stars, { sameSite: 'none', secure: true })
-                res.cookie('userId', user._id.toString(), { sameSite: 'none', secure: true })
+                res.cookie('userToken', token, { httpOnly: true })
+                //, { sameSite: 'none', secure: true })
+                res.cookie('stars', user.stars)
+                // , { sameSite: 'none', secure: true }
+                res.cookie('userId', user._id.toString())
+                // { sameSite: 'none', secure: true }
                 .json({ successMessage: 'userToken: ', user: user })
             }
         }
