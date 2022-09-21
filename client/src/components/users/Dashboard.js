@@ -17,7 +17,7 @@ const Dashboard = ({setHeader}) => {
     if (logged) setHeader(logged.first)
     return(
         <>
-        {(logged && logged._id === '62f693acc7864d95c7e69e82') 
+        {(logged && logged._id === '632b17fd59cb80d1d403cf6d') 
             ? 
             <AdminDash/>
             : 
