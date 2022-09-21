@@ -42,8 +42,14 @@ const AdminDash = props => {
 
         {/* ALL LIKES TO EDIT */}
         <div className="container">
+            <h2>
+                Likes
+            </h2>
             { likes.map( (obj, i) =>
             <div key={i}>
+                <h3>
+                    {obj._id}
+                </h3>
                 <LikesForm likes={likes} setLikes={setLikes} old={obj} submit={'Update'}/>
                 <button className='fancy-btn' onClick={e=>handleDelete(e,obj._id)}>
                     Delete
