@@ -26,10 +26,7 @@ const Home = ({setHeader}) => {
                             </h3>
                         </li>
                         <li>
-                            I am a developer specializing in: HTML, CSS, JavaScript, and Python.
-                        </li>
-                        <li>
-                            I like nature, being festive, and spending time with loved ones (James and Peanut). 
+                            I am a developer specializing in: HTML, CSS, JavaScript, Java, and Python.
                         </li>
                         <li>
                             <span className='accent'>
