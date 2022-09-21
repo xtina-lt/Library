@@ -118,7 +118,7 @@ const Home = ({setHeader}) => {
                     Ensuring dynamic readability between cross-browsers, cross-platforms (operating systems), and cross-devices is pertinent to front-end development.
                     <br/>
                     Examples: <span className='accent'>Hypertext Markup Language(HTML)</span>, <span className='accent'>Cascading Style Sheets(CSS)</span>, and <span className='accent'>JavaScript(JS)</span> frameworks.
-                    <LikeIcon id={'632b20b509af5427faaafb34c'}/>
+                    <LikeIcon id={'632b20b509af5427faaafb34'}/>
                 </div>
                 <div>
                     <h3>

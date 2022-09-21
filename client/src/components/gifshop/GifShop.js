@@ -58,7 +58,7 @@ const GifShop = props => {
         {/* ADMIN CREATE *****************
             - can create new document */}
             {
-                (Cookies.get('userId') && Cookies.get('userId') === '62f693acc7864d95c7e69e82') ?
+                (Cookies.get('userId') && Cookies.get('userId') === '632b17fd59cb80d1d403cf6d') ?
                 <div>
                     <h2>
                         Create new
@@ -72,7 +72,7 @@ const GifShop = props => {
             - shows all documents in collection
             - can edit with forms */}
             {
-                (Cookies.get('userId') && Cookies.get('userId') === '62f693acc7864d95c7e69e82') ?
+                (Cookies.get('userId') && Cookies.get('userId') === '632b17fd59cb80d1d403cf6d') ?
                 <div className='container'>
                     { list.map( (obj, i) =>
                     <div key={i}>
