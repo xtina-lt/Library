@@ -51,7 +51,7 @@ const Form = ({ list, setList, projects, setProjects, old, submit }) => {
         }  
 
     return(
-        <form onSubmit={(submit === 'create') ?  handleCreate : handleUpdate} key={(old) ? old._id : null}>        
+        <form onSubmit={(submit === 'Create') ?  handleCreate : handleUpdate} key={(old) ? old._id : null}>        
             {success && <span className='accent'>Success!<br/></span>}
         <label>
             Github ID:

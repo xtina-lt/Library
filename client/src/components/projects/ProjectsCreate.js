@@ -50,7 +50,7 @@ const ProjectsAdmin = ({id}) => {
                 </div>
                 : */}
                 <div>
-                    <Form list={list} setList={setList} old={null} projects={projects} setProject={setProjects}/>
+                    <Form list={list} setList={setList} old={null} projects={projects} setProject={setProjects} submit={'Create'}/>
                 </div>
             {/* } */}
         </>
