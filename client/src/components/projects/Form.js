@@ -79,7 +79,7 @@ const Form = ({ list, setList, projects, setProjects, old, submit }) => {
         </label>
         <label>
             Categories:
-            <input type="text" value={item.categories.join(',').replaceAll('-', ' ').replaceAll('_', ' ')} onChange={ e => setItem({...item, topics : e.target.value.split(',')}) }/>
+            <input type="text" value={item.categories.join(',').replaceAll('-', ' ').replaceAll('_', ' ')} onChange={ e => setItem({...item, categories : e.target.value.split(',')}) }/>
         </label>
         <input type="submit" value={submit || 'Create'}/>
         </form>

@@ -51,7 +51,7 @@ const Filtered = ({list}) => {
                         <br/>
                         <button className='fancy-btn'>
                             <a href={obj.url} target="_blank" rel="noreferrer">
-                                Deployed Site
+                                Deployed Site {obj.url}
                             </a>
                         </button>
                         </>
@@ -60,7 +60,7 @@ const Filtered = ({list}) => {
                     }
                     <button className='fancy-btn'>
                         <a href={obj.gitUrl} target="_blank" rel="noreferrer">
-                            GitHub
+                            GitHub {obj.gitUrl}
                         </a>
                     </button>
                     <LikeIcon id={obj.likeId}/>
