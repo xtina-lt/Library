@@ -43,7 +43,7 @@ const Form = ({ list, setList, projects, setProjects, old, submit }) => {
                 console.log('created:', res.data)
                 // update list by giving all elements 
                 // that don't have the same git id as created ite,
-                setList( list.filter( e => e.gitId !== item.gitId) );
+                // setList( list.filter( e => e.gitId !== item.gitId) );
                 // add created tdata to projects
                 setProjects( [...projects, res.data._id] ) 
             } )
