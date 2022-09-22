@@ -36,7 +36,7 @@ const ProjectsAdmin = ({id}) => {
             <br/>
             list: {list.length}
         </div>
-            {
+            {/* {
                 (list.length>0) ?
                 <div className="container">
                     {list.map( (obj, i) =>
@@ -48,11 +48,11 @@ const ProjectsAdmin = ({id}) => {
                     </div>
                 )}
                 </div>
-                :
+                : */}
                 <div>
                     <Form list={list} setList={setList} old={null} projects={projects} setProject={setProjects}/>
                 </div>
-            }
+            {/* } */}
         </>
     )
 }
