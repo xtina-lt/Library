@@ -17,7 +17,7 @@ const Form = ({ list, setList, projects, setProjects, old, submit }) => {
 
     const handleUpdate = e => {
         e.preventDefault()
-        axios.put(`http://localhost:8000/api/projects/${item._id}`, item)
+        axios.put(`http://localhost:8000/api/project/${item._id}`, item)
             .then( res => {setSuccess(true)} )
             .catch( res => console.log(res.data.errors))
     }
