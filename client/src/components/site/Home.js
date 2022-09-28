@@ -16,7 +16,7 @@ const Home = ({setHeader}) => {
                             </h3>
                         </li>
                         <li>
-                            Email: xtina@xtina.codes
+                            Email: xtina_lt@outlook.com
                         </li>
                     </ul>
                     <ul>

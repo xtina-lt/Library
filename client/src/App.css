@@ -360,10 +360,13 @@ ul {
             max-width: 99vw;
         }
 
-        main > div > div {
+        main > div > div, .container {
             width: 94vw;
             margin: 1vh auto;
+            height: fit-content;
+            max-height: fit-content;
         }
+
 
         /* FORMS */
         input, label, select, textarea, select:focus{
